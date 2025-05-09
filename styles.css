@@ -1,3 +1,4 @@
+/*CSS docuemnto de ejemplo para aplicar pseudoclases y pseudoelementos*/
 body {
     margin: 100px;
     margin-left: 50px;
@@ -6,12 +7,18 @@ body {
     background-color: #ffe6e6;
 }
 
+/*1. Pseudoclases :hover en boton*/
+#myButton {
+    margin: 20px
+}
+
 #myButton:hover {
     background-color: green;
     color: white;
-    border-radius: 10px;
+    border-radius: 10px;;
 }
 
+/*2. Pseudoclases :target en un mensaje oculto */
 #mostarlink {
     display: none;
     margin-top: 10px;
@@ -25,6 +32,7 @@ body {
     display: block;
 }
 
+/*3. Pseudoclases :first-child al primer hijo de un contenedor*/
 p:first-child {
     color: rgb(47, 207, 82);
 }
@@ -40,6 +48,7 @@ p:first-child {
     color:  green;
 }
 
+/*4. Pseudoclases :invalid y :valid para válidar un formularios con input*/
 input:invalid {
     border: 2px solid red;
     background-color: #ffe6e6;
@@ -49,11 +58,13 @@ input:valid {
     border: 2px solid green;
 }
 
+/*5 Pseudoclases :type para resaltar los campos de un email*/
 input[type="email"] {
     border: 2px solid #007bff;
     background-color: #e6f;
 }
 
+/*6. Pseudoclases :focus para cambiar de borde el campo activo*/
 input[type="email"]:focus {
     border: 2px solid #0056b3;
     background-color: #35b2ec;
@@ -66,6 +77,7 @@ input[type="text"]:focus {
     border-radius: 10px;
 }
 
+/*7. Pseudoclases :only-of-type estlizar elementos únicos*/
 .modal-content p:only-of-type {
     background-color: #e1ffd4;
     color: #155724;
@@ -73,10 +85,129 @@ input[type="text"]:focus {
     padding: 10px;
 }
 
+/*8. Pseudoclases :first-of-type para aplicar estilo al primer párrafo*/
 section p:first-of-type {
     background-color: #38eb64;
     color: #171d72;
     border: 1px dashed rgb(222, 235, 48);
     padding: 10px;
+}
+
+/*9. Pseudoclases :root para defnir una variable con color*/
+:root {
+    --color-principal: #53f7e1;
+}
+
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #fc2a2a00;
+    padding: 20px;
+}
+
+h1 {
+    color: var(--color-principal);
+}
+
+button {
+    background-color: var(--color-principal);
+    color: rgb(46, 50, 247);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/*10. Menú de navegación con estilos semánticos que al pasar por el link cambie de color*/
+nav {
+    background-color: #000;
+    padding: 1px;
+    border-radius: 5px;
+    margin: -20px;
+    border-radius: 15px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 250px;
+    margin-left: 50px;
+}
+
+nav ul li a {
+    color: #1deff7;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #f821e6;
+    color: #000;
+}
+
+/*11. Pseudoelementos ::before para agregar contenido antes de un elemento*/
+h1::before {
+    content: emojis;
+    content: "\1f44d";
+    display: inline-block;
+    font-size: 20px;
+    color: rgb(112, 255, 46);
+    margin-bottom: 10px;
+}
+
+p::before {
+    content: emojis;
+    content: "\1f4c8";
+    display: inline-block;
+    font-size: 20px;
+    color: rgb(47, 248, 29);
+    margin-bottom: 5px;
+}
+
+/*12. Pseudoelementos ::after para agregar contenido después de un elemento*/
+p::after {
+    content: "";
+    display: block;
+    margin: 10px;
+    width: 100%;
+    height: 2px;
+    background-color: #0056b3;
+}
+
+/*13. Pseudoelementos ::after para crear un efecto de sombra*/
+#myButton {
+    position: relative;
+    background-color: #4caf4f;
+    color: rgb(255, 43, 43);
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 1;
+    overflow: hidden;
+}
+
+#myButton::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: -1;
+    transition: all 0.3s ease;
+}
+
+#myButton:hover::after {
+    top: 8px;
+    left: 8px;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
