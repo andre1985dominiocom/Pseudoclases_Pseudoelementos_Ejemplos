@@ -1,0 +1,82 @@
+body {
+    margin: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 90px;
+    background-color: #ffe6e6;
+}
+
+#myButton:hover {
+    background-color: green;
+    color: white;
+    border-radius: 10px;
+}
+
+#mostarlink {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #d4ed;
+    color: #155724;
+    border: 1px solid #c3e6;
+}
+
+#link:target #mostrarlink {
+    display: block;
+}
+
+p:first-child {
+    color: rgb(47, 207, 82);
+}
+
+#link div:first-child {
+    background-color: #41abf750;
+    padding: 10px;
+    border: 2px dashed #2196f3;
+}
+
+.modal-content a:first-child {
+    font-weight: bold;
+    color:  green;
+}
+
+input:invalid {
+    border: 2px solid red;
+    background-color: #ffe6e6;
+}
+
+input:valid {
+    border: 2px solid green;
+}
+
+input[type="email"] {
+    border: 2px solid #007bff;
+    background-color: #e6f;
+}
+
+input[type="email"]:focus {
+    border: 2px solid #0056b3;
+    background-color: #35b2ec;
+    border-radius: 10px;
+}
+
+input[type="text"]:focus {
+    border: 2px solid #f73131;
+    background-color: rgb(241, 238, 57);
+    border-radius: 10px;
+}
+
+.modal-content p:only-of-type {
+    background-color: #e1ffd4;
+    color: #155724;
+    border: 1px dashed green;
+    padding: 10px;
+}
+
+section p:first-of-type {
+    background-color: #38eb64;
+    color: #171d72;
+    border: 1px dashed rgb(222, 235, 48);
+    padding: 10px;
+}
+
