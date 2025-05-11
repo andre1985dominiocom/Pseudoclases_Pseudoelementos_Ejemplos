@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <nav class="menu_nav">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="usar_icono">
+            <span class="icono"></span>
+            <input type="text" placeholder="Buscar">
+        </div>
+        <div class="imagen-container">
+            <img src="assets/Imagenes.jpeg" alt="Imagen niña">
+        </div>
+        <nav class="menu_nav">
         <ul>
             <li><a href="#home">Inicio</a></li>
             <li><a href="#services">Servicios</a></li>
@@ -17,11 +24,16 @@
     <div id="myModel" class="model">
         <div class="modal-content">
             <h1>Bienvenidos</h1>
-            <section>
-                <p>Este es un modelo de ejemplo.</p>
+            <section class="centrar">
                 <p>El modelo de pseudoclases y pseudoelementos</p>
-                <a href="Hacer click en el archivo oculto">Información</a>
             </section>
+        <div class="text">
+            <p class="caja1">Este es un modelo de ejemplo.</p>
+            <p class="caja2">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Pariatur, similique magni? Autem dignissimos magni repudiandae commodi eos nihil,
+                rem pariatur inventore molestias laborum quaerat,
+                explicabo vitae, nesciunt sapiente in! Necessitatibus.</p>
+        </div>
         </div>
             <div id="link">
                 <div id="Mostrar link">
@@ -32,10 +44,12 @@
                 <label for="nombre">Nombre (obligatorio)</label><br>
                 <input type="text" id="nombre" name="nombre" required><br><br>
                 <label for="correo">Correo Electrónico</label><br>
-                <input type="email" id="correo" name="correo"><br<br>
+                <input type="email" id="correo" name="correo"><br><br>
             </form>
         </div>
         <button id="myButton">Ingresar</button>
-    
+        <div class="card">
+            <button class="eliminar">Eliminar</button>
+        </div>
 </body>
 </html>
